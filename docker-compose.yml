@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    container_name: diet-tracker-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - PORT=${PORT}
+      - NODE_ENV=development
+    env_file:
+      - .env
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend
+    container_name: diet-tracker-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

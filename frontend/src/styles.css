@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small helper styles */
+.input {
+  @apply w-full px-3 py-2 border rounded-md bg-white;
+}
+.btn {
+  @apply px-3 py-2 border rounded-md bg-white hover:shadow;
+}
+.btn-primary {
+  @apply px-4 py-2 rounded-md bg-sky-600 text-white font-medium;
+}
