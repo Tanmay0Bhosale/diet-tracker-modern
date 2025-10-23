@@ -24,3 +24,4 @@ A modern Diet & Meal Tracker (React + Vite + Tailwind frontend, Express + MongoD
 ## Testing CI/CD Pipeline
 ## Testing CI/CD Pipeline
 Test after fixing security group
+## Deployment via CI/CD
