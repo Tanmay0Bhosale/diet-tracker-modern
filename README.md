@@ -23,3 +23,4 @@ A modern Diet & Meal Tracker (React + Vite + Tailwind frontend, Express + MongoD
 - Replace secrets in backend/.env if you want a different JWT secret.
 ## Testing CI/CD Pipeline
 ## Testing CI/CD Pipeline
+Test after fixing security group
