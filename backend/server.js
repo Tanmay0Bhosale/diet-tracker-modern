@@ -7,9 +7,21 @@ const mealRoutes = require('./routes/mealRoutes');
 
 dotenv.config();
 const app = express();
-app.use(express.json());
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }));
 
+// CORS middleware - MUST come before routes
+app.use(cors({
+  origin: [
+    'http://13.124.195.254:5173',
+    'http://localhost:5173'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(express.json());
+
+// Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/meals', mealRoutes);
 
@@ -22,3 +34,4 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 .catch(err => {
   console.error('MongoDB connection error', err);
 });
+
