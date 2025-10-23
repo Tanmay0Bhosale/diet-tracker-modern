@@ -22,3 +22,4 @@ A modern Diet & Meal Tracker (React + Vite + Tailwind frontend, Express + MongoD
 - If you get 'Cannot connect to MongoDB', ensure your Atlas cluster accepts connections from your IP (allowlist) or set Network Access to allow your IP / 0.0.0.0/0 for testing.
 - Replace secrets in backend/.env if you want a different JWT secret.
 ## Testing CI/CD Pipeline
+## Testing CI/CD Pipeline
